@@ -1,0 +1,335 @@
+/* 响应式优化样式 - Responsive Design Additions */
+/* 断点：480px (手机竖屏), 768px (手机横屏), 1024px (平板), 1025px+ (电脑) */
+
+/* 基础响应式设置 */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: clamp(0.9375rem, 0.2vw + 0.875rem, 1.0625rem);
+  line-height: 1.7;
+}
+
+/* 图片响应式 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 容器最大宽度 */
+.nav-container,
+.section,
+.products-grid,
+.benefits-grid,
+.testimonials-grid,
+.footer-content,
+.stats-grid {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 触摸区域最小尺寸 */
+.btn,
+.nav-links a,
+.mobile-menu-btn,
+.lang-toggle,
+.lang-dropdown button,
+.back-to-top,
+.wechat-float,
+.social-link {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 字体响应式缩放 */
+h1 { font-size: clamp(2rem, 6vw, 4rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+p { font-size: clamp(0.9375rem, 1.5vw, 1.125rem); }
+
+/* 间距响应式 */
+.section {
+  padding: clamp(60px, 10vw, 100px) clamp(16px, 3vw, 40px);
+}
+
+/* 产品网格响应式 */
+.products-grid,
+.benefits-grid,
+.testimonials-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(20px, 3vw, 40px);
+}
+
+/* ========== 平板 (1024px) ========== */
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 0 16px;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-image {
+    height: 400px;
+    order: -1;
+  }
+  
+  .products-grid,
+  .benefits-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========== 手机横屏/小平板 (768px) ========== */
+@media (max-width: 768px) {
+  /* 导航栏移动端 */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: var(--primary-beige);
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(45, 90, 39, 0.16);
+    gap: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: var(--text-dark);
+    padding: 16px;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Hero 区域移动端 */
+  .hero {
+    min-height: 70vh;
+    padding: 60px 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+
+  .hero p {
+    font-size: clamp(0.9375rem, 2.5vw, 1.125rem);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 网格单列 */
+  .products-grid,
+  .benefits-grid,
+  .testimonials-grid,
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  /* 数据统计 */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* 页脚 */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-section a:hover {
+    padding-left: 0;
+  }
+
+  /* 移动端底部固定按钮 */
+  .mobile-consult-btn {
+    display: block;
+  }
+  
+  .wechat-float {
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .wechat-popup {
+    bottom: 140px;
+    right: 20px;
+    left: 20px;
+    max-width: none;
+  }
+  
+  .back-to-top {
+    bottom: 100px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+
+  .about-image {
+    height: 300px;
+  }
+}
+
+/* ========== 手机竖屏 (480px) ========== */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 60vh;
+    padding: 50px 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .hero p {
+    font-size: 0.9375rem;
+  }
+
+  .nav-container {
+    padding: 0 16px;
+    height: 70px;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+
+  .logo-icon {
+    font-size: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-number {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  .product-image {
+    height: 220px;
+    font-size: 4rem;
+  }
+
+  .product-info {
+    padding: 15px;
+  }
+
+  .product-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .product-info p {
+    font-size: 0.875rem;
+  }
+
+  .benefit-icon {
+    font-size: 2.5rem;
+  }
+
+  .testimonial-content {
+    font-size: 0.875rem;
+    padding-left: 1rem;
+  }
+
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .qr-code {
+    width: 160px;
+    height: 160px;
+    font-size: 2.5rem;
+  }
+
+  .footer {
+    padding: 60px 16px 30px;
+  }
+
+  .back-to-top {
+    bottom: 90px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .wechat-float {
+    bottom: 75px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+  }
+
+  .mobile-consult-btn {
+    padding: 12px 16px;
+  }
+}
+
+/* 触摸优化 - 禁用 hover 效果 */
+@media (hover: none) and (pointer: coarse) {
+  .product-card:hover,
+  .benefit-card:hover,
+  .testimonial-card:hover,
+  .contact-card:hover {
+    transform: none;
+  }
+  
+  .btn:hover,
+  .nav-links a:hover {
+    transform: none;
+  }
+}
+
+/* 表格响应式 */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 30px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
