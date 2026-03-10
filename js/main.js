@@ -1,6 +1,6 @@
 /**
- * 粉防杞官网 - 主 JavaScript 文件
- * 处理导航、交互等功能
+ * 汉防己草本官网 - 主 JavaScript 文件
+ * 处理导航、交互、动画等功能
  */
 
 // DOM 加载完成后执行
@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
   initWechatFloat();
   initSmoothScroll();
   initAnimations();
+  initBackToTop();
+  initScrollAnimations();
+  initLazyLoad();
 });
 
 /**
@@ -25,12 +28,19 @@ function initNavbar() {
       navbar.classList.add('scrolled');
     }
     
-    // 监听滚动事件
+    // 监听滚动事件 - 使用节流优化性能
+    let ticking = false;
     window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     });
   }
@@ -76,7 +86,8 @@ function initWechatFloat() {
   if (wechatFloat && wechatPopup) {
     let isPopupVisible = false;
     
-    wechatFloat.addEventListener('click', function() {
+    wechatFloat.addEventListener('click', function(e) {
+      e.stopPropagation();
       isPopupVisible = !isPopupVisible;
       
       if (isPopupVisible) {
@@ -110,7 +121,7 @@ function initSmoothScroll() {
         const targetElement = document.querySelector(targetId);
         
         if (targetElement) {
-          const navbarHeight = 70;
+          const navbarHeight = 80;
           const targetPosition = targetElement.offsetTop - navbarHeight;
           
           window.scrollTo({
@@ -124,10 +135,46 @@ function initSmoothScroll() {
 }
 
 /**
- * 动画效果
+ * 返回顶部按钮
  */
-function initAnimations() {
-  // 使用 Intersection Observer 实现滚动动画
+function initBackToTop() {
+  const backToTopBtn = document.getElementById('backToTop');
+  
+  if (backToTopBtn) {
+    // 监听滚动事件显示/隐藏按钮
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          if (window.scrollY > 500) {
+            backToTopBtn.classList.add('show');
+          } else {
+            backToTopBtn.classList.remove('show');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+    
+    // 点击返回顶部
+    backToTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+}
+
+/**
+ * 滚动动画 - Intersection Observer
+ */
+function initScrollAnimations() {
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+  
+  if (animatedElements.length === 0) return;
+  
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -136,97 +183,164 @@ function initAnimations() {
   const observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.classList.add('animated');
+        // 动画完成后停止观察
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
   
-  // 观察所有需要动画的元素
-  const animatedElements = document.querySelectorAll('.product-card, .benefit-card, .testimonial-card, .contact-card');
-  
   animatedElements.forEach(function(element) {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(20px)';
-    element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
     observer.observe(element);
   });
 }
 
 /**
- * 产品卡片点击跳转（可选功能）
+ * 动画效果
  */
-function goToProductDetail(productId) {
-  // 预留产品详情页跳转功能
-  console.log('跳转到产品详情:', productId);
+function initAnimations() {
+  // 为卡片元素添加初始状态
+  const cards = document.querySelectorAll('.product-card, .benefit-card, .testimonial-card, .contact-card');
+  
+  cards.forEach(function(element, index) {
+    // 添加 staggered 延迟效果
+    element.style.transitionDelay = (index % 4) * 0.1 + 's';
+  });
 }
 
 /**
- * 添加到购物车（预留功能）
+ * 图片懒加载
  */
-function addToCart(productId, productName) {
-  // 预留购物车功能
-  alert('如需购买，请添加客服微信：fangji_vip');
-}
-
-/**
- * 联系客服
- */
-function contactService() {
-  const wechatPopup = document.getElementById('wechatPopup');
-  if (wechatPopup) {
-    wechatPopup.classList.add('show');
-  }
-}
-
-/**
- * 页面加载完成提示（可选）
- */
-window.addEventListener('load', function() {
-  // 可以在这里添加页面加载完成的提示或其他操作
-  console.log('粉防杞官网加载完成');
-});
-
-/**
- * 防止快速双击缩放（移动端优化）
- */
-let lastTouchEnd = 0;
-document.addEventListener('touchend', function(event) {
-  const now = Date.now();
-  if (now - lastTouchEnd <= 300) {
-    event.preventDefault();
-  }
-  lastTouchEnd = now;
-}, false);
-
-/**
- * 图片懒加载（如果有图片的话）
- */
-function lazyLoadImages() {
-  const images = document.querySelectorAll('img[data-src]');
+function initLazyLoad() {
+  const lazyImages = document.querySelectorAll('img[data-src]');
+  
+  if (lazyImages.length === 0) return;
   
   const imageObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         const img = entry.target;
         img.src = img.dataset.src;
-        img.removeAttribute('data-src');
+        img.classList.add('loaded');
         imageObserver.unobserve(img);
       }
     });
   });
   
-  images.forEach(function(img) {
+  lazyImages.forEach(function(img) {
     imageObserver.observe(img);
   });
 }
 
-// 导出函数供外部使用（如果需要）
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    initNavbar,
-    initMobileMenu,
-    initWechatFloat,
-    contactService
+/**
+ * 数字滚动动画（用于统计数据）
+ */
+function animateCounter(element, target, duration = 2000) {
+  const start = 0;
+  const increment = target / (duration / 16); // 60fps
+  let current = start;
+  
+  const timer = setInterval(function() {
+    current += increment;
+    if (current >= target) {
+      current = target;
+      clearInterval(timer);
+    }
+    
+    // 格式化数字
+    if (target >= 10000) {
+      element.textContent = (current / 10000).toFixed(0) + '万+';
+    } else if (target >= 1000) {
+      element.textContent = Math.floor(current) + '+';
+    } else {
+      element.textContent = Math.floor(current);
+    }
+  }, 16);
+}
+
+/**
+ * 初始化统计数字动画
+ */
+function initStatsAnimation() {
+  const statNumbers = document.querySelectorAll('.stat-number');
+  
+  if (statNumbers.length === 0) return;
+  
+  const observerOptions = {
+    threshold: 0.5
+  };
+  
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const element = entry.target;
+        const text = element.textContent;
+        
+        // 提取数字
+        const match = text.match(/(\d+)/);
+        if (match) {
+          const target = parseInt(match[1]);
+          const suffix = text.replace(/\d+/g, '');
+          
+          // 简单动画
+          let current = 0;
+          const increment = target / 50;
+          const timer = setInterval(function() {
+            current += increment;
+            if (current >= target) {
+              element.textContent = target + suffix;
+              clearInterval(timer);
+            } else {
+              element.textContent = Math.floor(current) + suffix;
+            }
+          }, 30);
+        }
+        
+        observer.unobserve(element);
+      }
+    });
+  }, observerOptions);
+  
+  statNumbers.forEach(function(stat) {
+    observer.observe(stat);
+  });
+}
+
+// 页面加载完成后初始化统计动画
+window.addEventListener('load', initStatsAnimation);
+
+/**
+ * 添加页面加载完成类
+ */
+window.addEventListener('load', function() {
+  document.body.classList.add('loaded');
+});
+
+/**
+ * 性能优化 - 防抖函数
+ */
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+/**
+ * 性能优化 - 节流函数
+ */
+function throttle(func, limit) {
+  let inThrottle;
+  return function(...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
   };
 }
