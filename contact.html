@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="联系粉防杞 - 购买咨询、客服微信、联系方式">
+  <title>购买咨询 - 粉防杞</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🌿</span>
+        <span>粉防杞</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="products.html">产品中心</a></li>
+        <li><a href="about.html">关于我们</a></li>
+        <li><a href="testimonials.html">客户见证</a></li>
+        <li><a href="contact.html" class="active">购买咨询</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </div>
+  </nav>
+
+  <!-- 页面标题 -->
+  <section class="hero" style="min-height: 40vh;">
+    <div class="hero-content fade-in">
+      <h1>购买咨询</h1>
+      <p>专业客服，为您解答，助您选购合适产品</p>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section class="section">
+    <div class="section-header">
+      <h2>联系方式</h2>
+      <p>选择您方便的方式联系我们</p>
+    </div>
+    <div class="contact-content" style="max-width: 1000px; margin: 0 auto;">
+      <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <h3>微信客服</h3>
+        <p><strong>微信号：fangji_vip</strong></p>
+        <p style="color: var(--primary-green);">⭐ 推荐方式</p>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-top: var(--spacing-xs);">
+          响应时间：9:00-22:00<br>
+          平均响应：< 5 分钟
+        </p>
+        <a href="#" class="btn btn-primary" style="margin-top: var(--spacing-sm); width: 100%;" onclick="showWechatQR(); return false;">查看二维码</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h3>电话咨询</h3>
+        <p><strong>400-888-8888</strong></p>
+        <p style="color: var(--primary-green);">工作时间拨打</p>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-top: var(--spacing-xs);">
+          服务时间：9:00-18:00<br>
+          周一至周五
+        </p>
+        <a href="tel:4008888888" class="btn btn-secondary" style="margin-top: var(--spacing-sm); width: 100%;">立即拨打</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <h3>邮箱联系</h3>
+        <p><strong>service@fangji.com</strong></p>
+        <p style="color: var(--primary-green);">适合详细咨询</p>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-top: var(--spacing-xs);">
+          响应时间：24 小时内<br>
+          工作日处理
+        </p>
+        <a href="mailto:service@fangji.com" class="btn btn-secondary" style="margin-top: var(--spacing-sm); width: 100%;">发送邮件</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 微信二维码 -->
+  <section class="section" id="wechatSection" style="display: none;">
+    <div class="section-header">
+      <h2>添加客服微信</h2>
+      <p>扫描二维码，立即咨询</p>
+    </div>
+    <div class="qr-section" style="max-width: 500px;">
+      <div class="qr-code" style="width: 250px; height: 250px; font-size: 4rem; margin: 0 auto var(--spacing-md);">📱</div>
+      <p style="font-size: 1.2rem; margin-bottom: var(--spacing-xs);"><strong>微信号：fangji_vip</strong></p>
+      <p style="color: var(--text-light); margin-bottom: var(--spacing-sm);">或搜索微信号直接添加</p>
+      <div style="background: var(--light-green); padding: var(--spacing-sm); border-radius: var(--border-radius); margin-top: var(--spacing-md);">
+        <p style="color: var(--primary-green); font-weight: 500; margin-bottom: var(--spacing-xs);">🎁 添加客服专享福利：</p>
+        <ul style="text-align: left; color: var(--text-light); font-size: 0.95rem; line-height: 2;">
+          <li>首次购买享 9 折优惠</li>
+          <li>免费健康咨询服务</li>
+          <li>新品优先体验资格</li>
+          <li>会员专属优惠活动</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 购买流程 -->
+  <section class="section" style="background: var(--light-brown);">
+    <div class="section-header">
+      <h2>购买流程</h2>
+      <p>简单四步，轻松购买</p>
+    </div>
+    <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md);">
+      <div style="text-align: center; padding: var(--spacing-md);">
+        <div style="width: 80px; height: 80px; background: var(--primary-green); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto var(--spacing-sm);">1</div>
+        <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-xs);">联系客服</h3>
+        <p style="color: var(--text-light);">添加微信或拨打电话</p>
+      </div>
+      <div style="text-align: center; padding: var(--spacing-md);">
+        <div style="width: 80px; height: 80px; background: var(--primary-green); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto var(--spacing-sm);">2</div>
+        <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-xs);">咨询选购</h3>
+        <p style="color: var(--text-light);">专业推荐合适产品</p>
+      </div>
+      <div style="text-align: center; padding: var(--spacing-md);">
+        <div style="width: 80px; height: 80px; background: var(--primary-green); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto var(--spacing-sm);">3</div>
+        <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-xs);">完成支付</h3>
+        <p style="color: var(--text-light);">支持多种支付方式</p>
+      </div>
+      <div style="text-align: center; padding: var(--spacing-md);">
+        <div style="width: 80px; height: 80px; background: var(--primary-green); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto var(--spacing-sm);">4</div>
+        <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-xs);">收货验收</h3>
+        <p style="color: var(--text-light);">全国包邮 3-5 天送达</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 常见问题 -->
+  <section class="section">
+    <div class="section-header">
+      <h2>常见问题</h2>
+      <p>您可能关心的问题</p>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: var(--spacing-md); margin-bottom: var(--spacing-sm);">
+        <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-xs);">❓ 产品是正品吗？</h3>
+        <p style="color: var(--text-light); line-height: 1.8;">是的，我们所有产品均来自道地产区，有完整的质量检测报告和追溯体系，支持验货。我们经营多年，口碑是我们的生命线。</p>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: var(--spacing-md); margin-bottom: var(--spacing-sm);">
+        <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-xs);">❓ 多久能看到效果？</h3>
+        <p style="color: var(--text-light); line-height: 1.8;">中药养生讲究循序渐进，一般建议连续服用 1-3 个月。具体效果因人而异，与个人体质、使用方法等因素有关。建议遵医嘱或咨询专业人士。</p>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: var(--spacing-md); margin-bottom: var(--spacing-sm);">
+        <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-xs);">❓ 支持退换货吗？</h3>
+        <p style="color: var(--text-light); line-height: 1.8;">支持 7 天无理由退换货（产品未拆封）。如产品质量问题，我们承担往返运费。具体退换货政策可咨询客服。</p>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: var(--spacing-md); margin-bottom: var(--spacing-sm);">
+        <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-xs);">❓ 发货时间和物流？</h3>
+        <p style="color: var(--text-light); line-height: 1.8;">工作日 48 小时内发货，全国包邮（偏远地区除外）。一般 3-5 个工作日送达，发货后会提供物流单号供查询。</p>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: var(--spacing-md); margin-bottom: var(--spacing-sm);">
+        <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-xs);">❓ 有什么禁忌人群吗？</h3>
+        <p style="color: var(--text-light); line-height: 1.8;">孕妇、哺乳期妇女、儿童及特殊疾病患者请在医师指导下使用。脾胃虚寒者慎用。如正在服用其他药物，使用前请咨询医师或药师。</p>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: var(--spacing-md);">
+        <h3 style="color: var(--primary-green); margin-bottom: var(--spacing-xs);">❓ 有优惠活动吗？</h3>
+        <p style="color: var(--text-light); line-height: 1.8;">首次购买享 9 折优惠，会员有专属折扣。节假日和店庆期间会有促销活动。添加客服微信可第一时间获取优惠信息。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 温馨提示 -->
+  <section class="section" style="background: var(--light-green);">
+    <div class="section-header">
+      <h2>温馨提示</h2>
+      <p>健康养生，从了解开始</p>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto; background: var(--white); padding: var(--spacing-md); border-radius: var(--border-radius);">
+      <div style="display: grid; gap: var(--spacing-sm);">
+        <div style="display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+          <span style="color: var(--primary-green); font-size: 1.2rem;">⚠️</span>
+          <div>
+            <strong style="color: var(--text-dark);">理性购买</strong>
+            <p style="color: var(--text-light);">请根据自身需求购买，不要盲目囤货</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+          <span style="color: var(--primary-green); font-size: 1.2rem;">📋</span>
+          <div>
+            <strong style="color: var(--text-dark);">遵医嘱</strong>
+            <p style="color: var(--text-light);">如有疾病，请及时就医，本品为养生保健产品，不能替代药物治疗</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+          <span style="color: var(--primary-green); font-size: 1.2rem;">📖</span>
+          <div>
+            <strong style="color: var(--text-dark);">阅读说明</strong>
+            <p style="color: var(--text-light);">使用前请仔细阅读产品说明书，按照推荐方法使用</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+          <span style="color: var(--primary-green); font-size: 1.2rem;">🔄</span>
+          <div>
+            <strong style="color: var(--text-dark);">持续反馈</strong>
+            <p style="color: var(--text-light);">使用过程中如有任何问题，请及时联系客服</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 立即咨询 CTA -->
+  <section class="section contact">
+    <div class="section-header">
+      <h2>立即咨询</h2>
+      <p>专业客服在线，为您解答</p>
+    </div>
+    <div class="qr-section">
+      <div class="qr-code">📱</div>
+      <p><strong>微信扫一扫</strong></p>
+      <p>添加客服微信：fangji_vip</p>
+      <p style="color: var(--primary-green); font-size: 0.9rem; margin-top: var(--spacing-xs);">首次购买享 9 折优惠</p>
+      <button class="btn btn-primary" style="margin-top: var(--spacing-sm); width: 100%;" onclick="showWechatQR();">查看二维码</button>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>🌿 粉防杞</h3>
+        <p>传承千年中药智慧</p>
+        <p>守护现代健康生活</p>
+      </div>
+      <div class="footer-section">
+        <h3>快速链接</h3>
+        <a href="index.html">首页</a>
+        <a href="products.html">产品中心</a>
+        <a href="about.html">关于我们</a>
+        <a href="contact.html">购买咨询</a>
+      </div>
+      <div class="footer-section">
+        <h3>产品中心</h3>
+        <a href="products.html">原药材/饮片</a>
+        <a href="products.html">粉防己胶囊</a>
+        <a href="products.html">养生茶包</a>
+        <a href="products.html">泡酒料包</a>
+      </div>
+      <div class="footer-section">
+        <h3>联系方式</h3>
+        <p>微信：fangji_vip</p>
+        <p>电话：400-888-8888</p>
+        <p>邮箱：service@fangji.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 粉防杞。All Rights Reserved. | 本网站仅供产品展示，具体功效因人而异</p>
+    </div>
+  </footer>
+
+  <!-- 浮动微信按钮 -->
+  <div class="wechat-float" id="wechatFloat">💬</div>
+  <div class="wechat-popup" id="wechatPopup">
+    <p>扫描二维码添加客服</p>
+    <div class="qr-code" style="width: 150px; height: 150px; font-size: 2rem;">📱</div>
+    <p style="font-size: 0.9rem; color: var(--text-light);">微信号：fangji_vip</p>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    function showWechatQR() {
+      document.getElementById('wechatSection').style.display = 'block';
+      document.getElementById('wechatSection').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
