@@ -1,330 +1,1658 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="HanFangji Herbal - Traditional Chinese herbal wellness products, offering Fangji Root raw herb, capsules, wellness tea bags and more premium products">
-  <meta name="keywords" content="Fangji Root, HanFangji, Chinese herbal medicine, wellness, health, herbal supplements, capsules, tea bags, natural health">
+  <meta name="description" content="汉防己草本 - 专业粉防己原药材种植销售，浙江、江西赣北产地直供，天然无硫，品质保证，源头价格，支持批量采购">
+  <meta name="keywords" content="粉防己, 粉防己原药材, 汉防己, 粉防己种植, 粉防己批发, 粉防己产地直供, 无硫粉防己, 江西赣北粉防己">
   <meta name="author" content="HanFangji Herbal">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#2D5A27">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta property="og:title" content="HanFangji Herbal - Ancient Chinese Herbal Wisdom for Modern Wellness">
-  <meta property="og:description" content="Premium Fangji Root herbal products for natural health and wellness">
+  <meta property="og:title" content="汉防己草本 - 粉防己原药材种植销售，浙江、江西赣北产地直供">
+  <meta property="og:description" content="专业粉防己原药材种植基地，浙江、江西赣北产地直供，天然无硫，品质保证，支持批量采购">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <title>HanFangji Herbal | 汉防己草本</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <link rel="preload" href="css/style.css" as="style">
-  <link rel="preload" href="css/responsive.css" as="style">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <title>汉防己草本 | 粉防己原药材种植销售，浙江、江西赣北产地直供</title>
+  
+  <!-- 外部资源 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* ==================== 全局样式 ==================== */
+    :root {
+      /* 清新嫩芽绿 + 米白背景 配色系统 */
+      --primary: #7ccd7c;      /* 嫩芽绿 - 主色调 */
+      --primary-light: #90ee90;/* 浅嫩芽绿 - 悬停状态 */
+      --primary-dark: #548b54; /* 深嫩芽绿 - 强调/边框 */
+      --primary-bg: #f9f9f2;   /* 米白色背景 */
+      --secondary: #8b7355;    /* 原木色 - 重点文字/价格 */
+      --secondary-light: #a68b67; /* 浅原木色 */
+      --dark: #333333;         /* 主文本色 - 深灰色 */
+      --gray: #666666;         /* 次要文本色 - 中灰色 */
+      --light-gray: #999999;   /* 淡文本色 */
+      --white: #ffffff;        /* 纯白 - 卡片背景 */
+      --warning: #e6b89c;      /* 浅陶土色 - 评分星标色 */
+      
+      /* 布局系统 */
+      --shadow-sm: 0 2px 8px rgba(124, 205, 124, 0.1);
+      --shadow-md: 0 4px 12px rgba(124, 205, 124, 0.2);
+      --shadow-lg: 0 8px 24px rgba(124, 205, 124, 0.3);
+      
+      /* 间距系统 */
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      
+      /* 过渡系统 */
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+      color: var(--dark);
+      line-height: 1.6;
+      background-color: var(--primary-bg); /* 全局米白背景 */
+      scroll-behavior: smooth;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    
+    /* 容器 */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-sm);
+    }
+    
+    /* 文本对齐 */
+    .text-center {
+      text-align: center;
+    }
+    
+    /* 间距类 */
+    .mt-sm { margin-top: var(--space-sm); }
+    .mt-md { margin-top: var(--space-md); }
+    .mt-lg { margin-top: var(--space-lg); }
+    .mb-sm { margin-bottom: var(--space-sm); }
+    .mb-md { margin-bottom: var(--space-md); }
+    .mb-lg { margin-bottom: var(--space-lg); }
+    
+    /* ==================== 语言切换按钮 ==================== */
+    .lang-switch {
+      display: flex;
+      gap: var(--space-xs);
+      margin-left: var(--space-md);
+    }
+    
+    .lang-btn {
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-weight: 500;
+      background-color: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary-dark);
+      transition: var(--transition);
+    }
+    
+    .lang-btn.active {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .lang-btn:hover {
+      background-color: rgba(124, 205, 124, 0.1);
+    }
+    
+    /* ==================== 按钮样式 ==================== */
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 500;
+      text-align: center;
+      transition: var(--transition);
+      border: none;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary); /* 嫩芽绿按钮 */
+      color: white;
+      font-weight: 600;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--primary-dark);
+      border: 1px solid var(--primary);
+    }
+    
+    .btn-secondary:hover {
+      background-color: rgba(124, 205, 124, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    /* 强调按钮 - 原木色按钮 */
+    .btn-emphasis {
+      background-color: var(--secondary); /* 原木色 */
+      color: white;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+    }
+    
+    .btn-emphasis:hover {
+      background-color: var(--secondary-light);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    /* ==================== 导航栏 ==================== */
+    .navbar {
+      background-color: var(--white); /* 白色导航栏 */
+      box-shadow: var(--shadow-sm);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      height: 70px;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+    
+    .logo i {
+      font-size: 1.5rem;
+      margin-right: var(--space-xs);
+      color: var(--primary);
+    }
+    
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: var(--space-lg);
+    }
+    
+    .nav-links a {
+      color: var(--gray);
+      font-weight: 500;
+      position: relative;
+    }
+    
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: var(--primary-dark);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary);
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      color: var(--gray);
+    }
+    
+    /* ==================== 英雄区（封面）- 嫩芽绿+米白自然风格 ==================== */
+    .hero {
+      height: 100vh;
+      /* 米白背景 + 低透明度自然图片 */
+      background: 
+        linear-gradient(rgba(249, 249, 242, 0.95), rgba(249, 249, 242, 0.95)), 
+        url('https://images.unsplash.com/photo-1597223557506-128201555292?q=80&w=1935&auto=format&fit=crop') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 70px;
+      margin-bottom: var(--space-xl);
+      position: relative;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      padding: 0 var(--space-sm);
+      animation: fadeIn 1s ease-in;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      margin-bottom: var(--space-md);
+      line-height: 1.2;
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+    
+    .hero h1 span {
+      color: var(--secondary); /* 原木色重点文字 */
+      display: block;
+      margin-top: 0.5rem;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+    }
+    
+    .hero p {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      margin-bottom: var(--space-xl);
+      color: var(--gray);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-buttons {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    /* ==================== 统计区 ==================== */
+    .stats {
+      background-color: var(--white); /* 白色背景 */
+      padding: var(--space-xl) 0;
+      margin-bottom: var(--space-xl);
+      border-radius: 10px;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: var(--space-xs);
+      color: var(--primary-dark);
+    }
+    
+    .stat-label {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      color: var(--gray);
+    }
+    
+    /* ==================== 通用区块标题 ==================== */
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .section-header h2 {
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
+      color: var(--primary-dark);
+      margin-bottom: var(--space-sm);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--primary);
+    }
+    
+    .section-header p {
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+    
+    /* ==================== 核心产品区 - 粉防己原药材 ==================== */
+    .main-product {
+      margin-bottom: var(--space-xl);
+      padding: var(--space-xl) 0;
+      background-color: var(--white); /* 白色背景 */
+      border-radius: 10px;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .product-detail {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    
+    .product-image-main {
+      height: 500px;
+      background-image: linear-gradient(rgba(124, 205, 124, 0.05), rgba(124, 205, 124, 0.05)), 
+                        url('https://images.unsplash.com/photo-1628899975792-42d771994bb9?q=80&w=1887&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .product-specs {
+      background-color: rgba(124, 205, 124, 0.05); /* 嫩芽绿透明背景 */
+      padding: var(--space-lg);
+      border-radius: 8px;
+      margin-bottom: var(--space-lg);
+      border: 1px solid rgba(124, 205, 124, 0.2);
+    }
+    
+    .product-specs h3 {
+      color: var(--primary-dark);
+      margin-bottom: var(--space-md);
+      font-size: 1.3rem;
+    }
+    
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--space-sm) 0;
+      border-bottom: 1px solid rgba(124, 205, 124, 0.1);
+    }
+    
+    .spec-label {
+      color: var(--dark);
+      font-weight: 500;
+    }
+    
+    .spec-value {
+      color: var(--gray);
+    }
+    
+    .product-price-main {
+      font-size: 2rem;
+      color: var(--secondary);
+      font-weight: 700;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .product-price-main span {
+      font-size: 1rem;
+      color: var(--gray);
+      font-weight: 400;
+    }
+    
+    /* ==================== 种植基地展示 ==================== */
+    .farm-showcase {
+      margin-bottom: var(--space-xl);
+      padding: var(--space-xl) 0;
+    }
+    
+    .farm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-md);
+    }
+    
+    .farm-image {
+      height: 250px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      border: 5px solid var(--white);
+    }
+    
+    .farm-image:hover {
+      transform: scale(1.03);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .farm-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* ==================== 品质保障 ==================== */
+    .quality {
+      margin-bottom: var(--space-xl);
+      padding: var(--space-xl) 0;
+      background-color: var(--white);
+      border-radius: 10px;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .quality-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-lg);
+    }
+    
+    .quality-card {
+      background-color: var(--primary-bg);
+      padding: var(--space-lg);
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid rgba(124, 205, 124, 0.1);
+    }
+    
+    .quality-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    
+    .quality-icon {
+      font-size: 2.8rem;
+      margin-bottom: var(--space-sm);
+      color: var(--primary);
+    }
+    
+    .quality-card h3 {
+      margin-bottom: var(--space-sm);
+      color: var(--primary-dark);
+      font-size: 1.3rem;
+    }
+    
+    .quality-card p {
+      color: var(--gray);
+      font-size: 1rem;
+    }
+    
+    /* ==================== 采购优势 ==================== */
+    .advantage {
+      background-color: var(--primary);
+      color: white;
+      padding: var(--space-xl) 0;
+      margin-bottom: var(--space-xl);
+      border-radius: 10px;
+    }
+    
+    .advantage .section-header h2,
+    .advantage .section-header p {
+      color: white;
+    }
+    
+    .advantage .section-header h2::after {
+      background-color: white;
+    }
+    
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-lg);
+    }
+    
+    .advantage-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: var(--space-lg);
+      border-radius: 8px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    
+    .advantage-card:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+    }
+    
+    .advantage-icon {
+      font-size: 2.8rem;
+      margin-bottom: var(--space-sm);
+      color: white;
+    }
+    
+    .advantage-card h3 {
+      margin-bottom: var(--space-sm);
+      font-size: 1.3rem;
+    }
+    
+    .advantage-card p {
+      opacity: 0.9;
+      font-size: 1rem;
+    }
+    
+    /* ==================== 客户评价 ==================== */
+    .testimonials {
+      padding: var(--space-xl) 0;
+      margin-bottom: var(--space-xl);
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+    }
+    
+    .testimonial-card {
+      background-color: var(--white);
+      padding: var(--space-lg);
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(124, 205, 124, 0.1);
+    }
+    
+    .star-rating {
+      color: var(--warning);
+      font-size: 1.2rem;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .testimonial-content {
+      color: var(--gray);
+      margin-bottom: var(--space-md);
+      font-style: italic;
+      line-height: 1.8;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(124, 205, 124, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+    }
+    
+    .author-info h4 {
+      color: var(--dark);
+      font-size: 1rem;
+    }
+    
+    .author-info p {
+      color: var(--light-gray);
+      font-size: 0.9rem;
+    }
+    
+    /* ==================== 联系采购 ==================== */
+    .contact {
+      margin-bottom: var(--space-xl);
+      background-color: var(--white);
+      padding: var(--space-xl) 0;
+      border-radius: 10px;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .contact-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+    
+    .contact-card {
+      background-color: var(--primary-bg);
+      padding: var(--space-lg);
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid rgba(124, 205, 124, 0.1);
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    
+    .contact-icon {
+      font-size: 2.8rem;
+      color: var(--primary);
+      margin-bottom: var(--space-sm);
+    }
+    
+    .contact-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: var(--space-md);
+      color: var(--primary-dark);
+    }
+    
+    .contact-card p {
+      color: var(--gray);
+      font-size: 1.1rem;
+      margin-bottom: var(--space-md);
+    }
+    
+    .contact-card .en-text {
+      font-size: 0.9rem;
+      color: var(--light-gray);
+      margin-top: 5px;
+      display: block;
+    }
+    
+    .qr-section {
+      text-align: center;
+      margin-top: var(--space-xl);
+    }
+    
+    .qr-code {
+      display: inline-block;
+      width: 220px;
+      height: 220px;
+      background-color: var(--primary-bg);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      color: var(--primary);
+      margin: var(--space-sm) 0;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(124, 205, 124, 0.2);
+    }
+    
+    /* ==================== 页脚 ==================== */
+    .footer {
+      background-color: var(--primary-dark);
+      color: white;
+      padding: var(--space-xl) 0 var(--space-lg);
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .footer-section h3 {
+      font-size: 1.2rem;
+      margin-bottom: var(--space-md);
+      color: var(--primary-light);
+    }
+    
+    .footer-section p,
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: var(--space-xs);
+      display: block;
+      font-size: 1rem;
+    }
+    
+    .footer-section .en-text {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 3px;
+    }
+    
+    .footer-section a:hover {
+      color: var(--primary-light);
+    }
+    
+    .footer-bottom {
+      padding-top: var(--space-lg);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+    
+    /* ==================== 辅助按钮 ==================== */
+    .back-to-top {
+      position: fixed;
+      bottom: var(--space-lg);
+      right: var(--space-lg);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: white;
+      font-size: 1.2rem;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .back-to-top.show {
+      display: flex;
+    }
+    
+    .wechat-float {
+      position: fixed;
+      bottom: calc(var(--space-lg) + 60px);
+      right: var(--space-lg);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--primary);
+      color: white;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 98;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .wechat-popup {
+      position: fixed;
+      bottom: calc(var(--space-lg) + 60px);
+      right: calc(var(--space-lg) + 60px);
+      background-color: var(--white);
+      padding: var(--space-md);
+      border-radius: 8px;
+      box-shadow: var(--shadow-lg);
+      display: none;
+      z-index: 97;
+      text-align: center;
+      width: 200px;
+      border: 1px solid rgba(124, 205, 124, 0.2);
+    }
+    
+    .wechat-float:hover + .wechat-popup,
+    .wechat-popup:hover {
+      display: block;
+    }
+    
+    .mobile-consult-btn {
+      display: none;
+      position: fixed;
+      bottom: var(--space-sm);
+      left: 0;
+      right: 0;
+      padding: 0 var(--space-sm);
+      z-index: 96;
+    }
+    
+    .mobile-consult-btn .btn {
+      width: 100%;
+    }
+    
+    /* ==================== 动画 ==================== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    
+    .animate-on-scroll.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* ==================== 响应式 ==================== */
+    @media (max-width: 768px) {
+      /* 导航 */
+      .nav-right {
+        flex-direction: row-reverse;
+      }
+      
+      .lang-switch {
+        margin-left: 0;
+        margin-right: var(--space-sm);
+      }
+      
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: var(--space-sm);
+        box-shadow: var(--shadow-sm);
+        border-bottom: 2px solid var(--primary);
+      }
+      
+      .nav-links.show {
+        display: flex;
+        animation: fadeIn 0.3s ease;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      /* 核心产品区 */
+      .product-detail {
+        grid-template-columns: 1fr;
+      }
+      
+      .product-image-main {
+        height: 300px;
+      }
+      
+      /* 辅助按钮 */
+      .wechat-float,
+      .back-to-top {
+        display: none;
+      }
+      
+      .mobile-consult-btn {
+        display: block;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-buttons {
+        flex-direction: column;
+      }
+      
+      .btn {
+        width: 100%;
+      }
+      
+      .stat-number {
+        font-size: 2rem;
+      }
+      
+      .lang-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <span class="logo-icon">🌿</span>
-        <span>HanFangji Herbal · 汉防己草本</span>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container container">
+      <a href="index.html" class="logo" data-lang-key="logo">
+        <i class="fas fa-leaf"></i>
+        <span>汉防己草本</span>
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active" data-zh="首页" data-en="Home">Home</a></li>
-        <li><a href="products.html" data-zh="产品中心" data-en="Products">Products</a></li>
-        <li><a href="about.html" data-zh="关于我们" data-en="About Us">About Us</a></li>
-        <li><a href="testimonials.html" data-zh="客户见证" data-en="Testimonials">Testimonials</a></li>
-        <li><a href="blog.html" data-zh="养生博客" data-en="Blog">Blog</a></li>
-        <li><a href="contact.html" data-zh="购买咨询" data-en="Contact">Contact</a></li>
-      </ul>
-      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      
+      <div class="nav-right">
+        <!-- 语言切换按钮 -->
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="zh">中文</button>
+          <button class="lang-btn" data-lang="en">English</button>
+        </div>
+        
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active" data-lang-key="nav_home">首页</a></li>
+          <li><a href="#product" data-lang-key="nav_product">粉防己原药材</a></li>
+          <li><a href="#farm" data-lang-key="nav_farm">种植基地</a></li>
+          <li><a href="#testimonials" data-lang-key="nav_testimonials">客户评价</a></li>
+          <li><a href="#contact" data-lang-key="nav_contact">采购咨询</a></li>
+        </ul>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-content fade-in">
-      <h1>
-        <span data-zh="一味老药" data-en="One Old Herb">One Old Herb</span>
-        <br>
-        <span data-zh="三代人都在用" data-en="Three Generations Trust">Three Generations Trust</span>
+  <!-- 英雄区 - 清新嫩芽绿+米白自然风格 -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 data-lang-key="hero_title">
+        粉防己原药材<br>
+        <span data-lang-key="hero_subtitle">浙江、江西赣北产地直供 · 天然无硫</span>
       </h1>
-      <p data-zh="粉防己这味药，老祖宗用了两千年。我们只是把它做好，让你用得放心" data-en="Fangji Root has been used for 2,000 years. We just make sure it's done right, so you can use it with confidence">Fangji Root has been used for 2,000 years. We just make sure it's done right, so you can use it with confidence</p>
+      <p data-lang-key="hero_desc">粉防己（Stephania tetrandra S. Moore）为防己科千金藤属植物，主产于浙江、江西赣北等道地产区。我们坚持仿野生种植模式，遵循GAP种植规范，全程无硫加工，保留药材天然药性，是制药、饮片加工的优质原料。</p>
       <div class="hero-buttons">
-        <a href="products.html" class="btn btn-primary" data-zh="浏览产品" data-en="Browse Products">Browse Products</a>
-        <a href="contact.html" class="btn btn-secondary" data-zh="联系我们" data-en="Contact Us">Contact Us</a>
+        <a href="#product" class="btn btn-primary" data-lang-key="btn_view_product">查看产品详情</a>
+        <a href="#contact" class="btn btn-emphasis" data-lang-key="btn_consult_now">立即采购咨询</a>
       </div>
     </div>
   </section>
 
-  <section class="stats-section">
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-number">2000+</div>
-        <div class="stat-label" data-zh="年历史传承" data-en="Years of History">Years of History</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">3</div>
-        <div class="stat-label" data-zh="代人传承" data-en="Generations">Generations</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">100%</div>
-        <div class="stat-label" data-zh="天然无硫" data-en="Natural & Sulfur-Free">Natural & Sulfur-Free</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">50000+</div>
-        <div class="stat-label" data-zh="满意客户" data-en="Satisfied Customers">Satisfied Customers</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-header">
-      <h2 data-zh="我们做的几样东西" data-en="What We Make">What We Make</h2>
-      <p data-zh="都是粉防己，做法不同，看你需要哪种" data-en="All Fangji Root, just prepared differently — pick what works for you">All Fangji Root, just prepared differently — pick what works for you</p>
-    </div>
-    <div class="products-grid">
-      <div class="product-card animate-on-scroll">
-        <div class="product-image">🌱</div>
-        <div class="product-info">
-          <h3 data-zh="粉防己原药材" data-en="Fangji Root (Raw Herb)">Fangji Root (Raw Herb)</h3>
-          <p data-zh="浙江山里收来的，切片晒干，没熏过硫。懂行的拿回去煎汤、泡酒都行" data-en="Harvested from Zhejiang mountains, sliced and sun-dried, no sulfur treatment. Use it for decoction or wine infusion">Harvested from Zhejiang mountains, sliced and sun-dried, no sulfur treatment. Use it for decoction or wine infusion</p>
-          <div class="product-price">$24.99/500g</div>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;" data-zh="问问怎么买" data-en="Ask How to Buy">Ask How to Buy</a>
+  <!-- 统计区 - 强化核心优势 -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">800+</div>
+          <div class="stat-label" data-lang-key="stat_1">亩GAP种植基地（浙江+赣北）</div>
         </div>
-      </div>
-      <div class="product-card animate-on-scroll">
-        <div class="product-image">💊</div>
-        <div class="product-info">
-          <h3 data-zh="粉防己胶囊" data-en="Fangji Root Capsules">Fangji Root Capsules</h3>
-          <p data-zh="懒得煎药就吃这个。一天两粒，出差带着也方便" data-en="For those who don't want to brew herbs. Two capsules a day, easy to carry on trips">For those who don't want to brew herbs. Two capsules a day, easy to carry on trips</p>
-          <div class="product-price">$42.99/bottle</div>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;" data-zh="问问怎么买" data-en="Ask How to Buy">Ask How to Buy</a>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label" data-lang-key="stat_2">代人传统种植技艺传承</div>
         </div>
-      </div>
-      <div class="product-card animate-on-scroll">
-        <div class="product-image">🍵</div>
-        <div class="product-info">
-          <h3 data-zh="粉防己养生茶包" data-en="Fangji Wellness Tea Bags">Fangji Wellness Tea Bags</h3>
-          <p data-zh="配了点其他草本，味道不苦。办公室泡一杯，当日常养生" data-en="Blended with other herbs, not bitter. Brew one at the office for daily wellness">Blended with other herbs, not bitter. Brew one at the office for daily wellness</p>
-          <div class="product-price">$18.99/box</div>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;" data-zh="问问怎么买" data-en="Ask How to Buy">Ask How to Buy</a>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label" data-lang-key="stat_3">无硫无添加自然加工</div>
         </div>
-      </div>
-      <div class="product-card animate-on-scroll">
-        <div class="product-image">🍶</div>
-        <div class="product-info">
-          <h3 data-zh="粉防己泡酒料包" data-en="Fangji Herbal Wine Kit">Fangji Herbal Wine Kit</h3>
-          <p data-zh="老方子配的，泡一个月就能喝。家里老人冬天喝两口，说腿脚暖和" data-en="Old family recipe, ready in a month. Elders drink a bit in winter, say it warms their legs">Old family recipe, ready in a month. Elders drink a bit in winter, say it warms their legs</p>
-          <div class="product-price">$27.99/set</div>
-          <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;" data-zh="问问怎么买" data-en="Ask How to Buy">Ask How to Buy</a>
+        <div class="stat-card">
+          <div class="stat-number">99%</div>
+          <div class="stat-label" data-lang-key="stat_4">客户复购率（药企/饮片厂）</div>
         </div>
       </div>
     </div>
-    <div class="text-center mt-md">
-      <a href="products.html" class="btn btn-secondary" data-zh="查看全部产品" data-en="View All Products">View All Products</a>
-    </div>
   </section>
 
-  <div class="divider-leaf">
-    <span>🌿</span>
-  </div>
-
-  <section class="section benefits">
-    <div class="section-header">
-      <h2 data-zh="这味药能帮到你什么" data-en="What This Herb Can Do">What This Herb Can Do</h2>
-      <p data-zh="老祖宗用了几千年，现代人也在用" data-en="Used for thousands of years, still working today">Used for thousands of years, still working today</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">💪</div>
-        <h3 data-zh="关节不舒服的人试试" data-en="For Joint Discomfort">For Joint Discomfort</h3>
-        <p data-zh="下雨天膝盖疼、早上起来手指僵的，很多人喝了说有帮助" data-en="For those with knee pain on rainy days or stiff fingers in the morning — many say it helps">For those with knee pain on rainy days or stiff fingers in the morning — many say it helps</p>
+  <!-- 核心产品区 - 粉防己原药材 -->
+  <section class="main-product" id="product">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-lang-key="product_title">粉防己原药材</h2>
+        <p data-lang-key="product_desc">粉防己为《中国药典》收载品种，性寒，味苦，归膀胱、肺经，具有利水消肿、祛风止痛的功效。我们的粉防己原药材严格按照药典标准采收加工，有效成分粉防己碱含量≥1.0%，符合2020版《中国药典》要求。</p>
       </div>
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">🩸</div>
-        <h3 data-zh="活血通络" data-en="Better Circulation">Better Circulation</h3>
-        <p data-zh="中医说它通经络，手脚冰凉的，喝一段时间会暖和些" data-en="TCM says it unblocks meridians. Those with cold hands and feet often feel warmer after a while">TCM says it unblocks meridians. Those with cold hands and feet often feel warmer after a while</p>
-      </div>
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">🛡️</div>
-        <h3 data-zh="身体底子好一些" data-en="Support Overall Health">Support Overall Health</h3>
-        <p data-zh="不是药，但长期喝下来，身体状态会稳一点" data-en="Not medicine, but long-term use helps stabilize your overall condition">Not medicine, but long-term use helps stabilize your overall condition</p>
-      </div>
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">😌</div>
-        <h3 data-zh="睡得踏实点" data-en="Better Sleep">Better Sleep</h3>
-        <p data-zh="有些人说喝了之后心神不宁的情况少了，能睡个好觉" data-en="Some say they feel less restless and sleep better after using it">Some say they feel less restless and sleep better after using it</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="about-content">
-      <div class="about-text">
-        <h3 data-zh="我们为什么做这个" data-en="Why We Do This">Why We Do This</h3>
-        <p data-zh="家里长辈有风湿，试过各种方子，最后还是回到粉防己这味药上。用了二十多年，不敢说治好了什么，但发作次数确实少多了。" data-en="Our elders had rheumatism. Tried many remedies, but always came back to Fangji Root. Used it for over 20 years — can't say it cured anything, but flare-ups became much less frequent.">Our elders had rheumatism. Tried many remedies, but always came back to Fangji Root. Used it for over 20 years — can't say it cured anything, but flare-ups became much less frequent.</p>
-        <p data-zh="后来就想，这么好的药，为什么现在知道的人不多了？于是开始找产地、学炮制，慢慢做起了这个事。没什么大志向，就是想让需要的人能用上靠谱的粉防己。" data-en="So we wondered: why don't more people know about this great herb? Started sourcing from origins, learning processing methods, and slowly built this. No grand mission — just want people who need it to get reliable Fangji Root.">So we wondered: why don't more people know about this great herb? Started sourcing from origins, learning processing methods, and slowly built this. No grand mission — just want people who need it to get reliable Fangji Root.</p>
-        <a href="about.html" class="btn btn-primary" data-zh="听听我们的故事" data-en="Hear Our Story">Hear Our Story</a>
-      </div>
-      <div class="about-image">🏮</div>
-    </div>
-  </section>
-
-  <section class="section testimonials">
-    <div class="section-header">
-      <h2 data-zh="用过的人怎么说" data-en="What People Say">What People Say</h2>
-      <p data-zh="都是真实反馈，不修图不删改" data-en="Real feedback, unedited">Real feedback, unedited</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card animate-on-scroll">
-        <div class="star-rating">★★★★★</div>
-        <div class="testimonial-content" data-zh="胶囊吃了三个月，下雨天膝盖没那么疼了。睡眠也好些，不是立马见效，但确实有用" data-en="Took the capsules for three months. Knees don't ache as much on rainy days. Sleep improved too — not instant, but it works">"Took the capsules for three months. Knees don't ache as much on rainy days. Sleep improved too — not instant, but it works"</div>
-        <div class="testimonial-author">
-          <div class="author-avatar">👨</div>
-          <div class="author-info">
-            <h4 data-zh="老张" data-en="Zhang">Zhang</h4>
-            <p data-zh="45 岁，北京" data-en="45, Beijing">45, Beijing</p>
+      
+      <div class="product-detail">
+        <div class="product-image-main animate-on-scroll"></div>
+        
+        <div class="product-info-main animate-on-scroll">
+          <h3 style="font-size: 1.8rem; margin-bottom: var(--space-md); color: var(--primary-dark);" data-lang-key="product_name">粉防己原药材（精选级）</h3>
+          
+          <div class="product-specs">
+            <h3 data-lang-key="product_spec_title">药典标准规格</h3>
+            <div class="spec-item">
+              <span class="spec-label" data-lang-key="spec_origin">产地</span>
+              <span class="spec-value">浙江·丽水 / 江西·赣北（道地产区）</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label" data-lang-key="spec_process">加工方式</span>
+              <span class="spec-value" data-lang-key="spec_process_val">自然晾晒，无硫熏，低温干燥</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label" data-lang-key="spec_shape">形态</span>
+              <span class="spec-value" data-lang-key="spec_shape_val">精选切片（3-5mm），粉性足</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label" data-lang-key="spec_moisture">含水率</span>
+              <span class="spec-value">≤12%（药典标准）</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label" data-lang-key="spec_alkaloid">粉防己碱含量</span>
+              <span class="spec-value">≥1.0%（HPLC检测）</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label" data-lang-key="spec_packaging">包装方式</span>
+              <span class="spec-value" data-lang-key="spec_packaging_val">食品级真空包装/食品级编织袋</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label" data-lang-key="spec_storage">储存条件</span>
+              <span class="spec-value">≤25℃，RH≤60%（阴凉干燥处）</span>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="testimonial-card animate-on-scroll">
-        <div class="star-rating">★★★★★</div>
-        <div class="testimonial-content" data-zh="茶包味道还行，不苦。我每天在办公室泡一杯，当养生茶喝" data-en="Tea bags taste okay, not bitter. I brew one daily at the office as a wellness tea">"Tea bags taste okay, not bitter. I brew one daily at the office as a wellness tea"</div>
-        <div class="testimonial-author">
-          <div class="author-avatar">👩</div>
-          <div class="author-info">
-            <h4 data-zh="小李" data-en="Li">Li</h4>
-            <p data-zh="38 岁，上海" data-en="38, Shanghai">38, Shanghai</p>
+          
+          <div class="product-price-main">
+            ¥128.00 <span data-lang-key="price_unit">/ 500g（药典级零售）</span>
           </div>
-        </div>
-      </div>
-      <div class="testimonial-card animate-on-scroll">
-        <div class="star-rating">★★★★★</div>
-        <div class="testimonial-content" data-zh="给我爸买的泡酒料，他按说明泡了一个月，说冬天腿脚没那么僵了。还会再买" data-en="Bought the wine kit for my dad. He followed instructions for a month, says his legs feel less stiff in winter. Will buy again">"Bought the wine kit for my dad. He followed instructions for a month, says his legs feel less stiff in winter. Will buy again"</div>
-        <div class="testimonial-author">
-          <div class="author-avatar">👨</div>
-          <div class="author-info">
-            <h4 data-zh="王哥" data-en="Wang">Wang</h4>
-            <p data-zh="52 岁，广州" data-en="52, Guangzhou">52, Guangzhou</p>
+          
+          <p style="color: var(--gray); margin-bottom: var(--space-lg);" data-lang-key="product_price_note">
+            批量采购（≥50kg）价格更优，可提供第三方检测报告（农残、重金属、有效成分），支持定制切片规格、包装方式，欢迎来电咨询具体报价和合作方案。
+          </p>
+          
+          <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap;">
+            <a href="#contact" class="btn btn-emphasis" data-lang-key="btn_quote">立即询价</a>
+            <a href="#contact" class="btn btn-secondary" data-lang-key="btn_test_report">索取检测报告</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="text-center mt-md">
-      <a href="testimonials.html" class="btn btn-secondary" data-zh="查看更多评价" data-en="View More Reviews">View More Reviews</a>
-    </div>
   </section>
 
-  <section class="section">
-    <div class="section-header">
-      <h2 data-zh="凭什么信我们" data-en="Why Trust Us">Why Trust Us</h2>
-      <p data-zh="说点实在的" data-en="Just the facts">Just the facts</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">🏞️</div>
-        <h3 data-zh="产地直收" data-en="Direct from Source">Direct from Source</h3>
-        <p data-zh="浙江、安徽的山里，跟农户直接收的。没有中间商，价格实在，品质也看得见" data-en="Directly from farmers in Zhejiang and Anhui mountains. No middlemen, fair price, visible quality">Directly from farmers in Zhejiang and Anhui mountains. No middlemen, fair price, visible quality</p>
+  <!-- 种植基地展示 -->
+  <section class="farm-showcase" id="farm">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-lang-key="farm_title">道地产区种植基地</h2>
+        <p data-lang-key="farm_desc">粉防己喜温暖湿润气候，适宜生长在海拔200-800米的丘陵山地，浙江丽水、江西赣北地区土壤疏松肥沃、气候温和湿润，是粉防己的传统道地产区，所产粉防己粉性足、有效成分含量高。</p>
       </div>
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">🔬</div>
-        <h3 data-zh="老法子 + 新设备" data-en="Old Ways, New Equipment">Old Ways, New Equipment</h3>
-        <p data-zh="炮制还是按老规矩来，但提取用现代设备，有效成分留得住" data-en="Processing follows traditional methods, but extraction uses modern equipment to preserve active compounds">Processing follows traditional methods, but extraction uses modern equipment to preserve active compounds</p>
-      </div>
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">✅</div>
-        <h3 data-zh="每批都检测" data-en="Every Batch Tested">Every Batch Tested</h3>
-        <p data-zh="没熏硫、没加乱七八糟的东西。检测报告可以要看" data-en="No sulfur, no additives. Test reports available on request">No sulfur, no additives. Test reports available on request</p>
-      </div>
-      <div class="benefit-card animate-on-scroll">
-        <div class="benefit-icon">👨‍⚕️</div>
-        <h3 data-zh="有问题随时问" data-en="Always Here to Help">Always Here to Help</h3>
-        <p data-zh="客服都懂点中医，不是那种只会发表情包的。用之前可以先问问适不适合你" data-en="Customer service knows some TCM, not just emoji senders. Ask before use if it's right for you">Customer service knows some TCM, not just emoji senders. Ask before use if it's right for you</p>
+      
+      <div class="farm-grid animate-on-scroll">
+        <div class="farm-image">
+          <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?q=80&w=1974&auto=format&fit=crop" alt="浙江粉防己GAP种植基地，仿野生生长环境">
+        </div>
+        <div class="farm-image">
+          <img src="https://images.unsplash.com/photo-1597223557506-128201555292?q=80&w=1935&auto=format&fit=crop" alt="江西赣北粉防己生长环境，道地产区自然条件">
+        </div>
+        <div class="farm-image">
+          <img src="https://images.unsplash.com/photo-1628899975792-42d771994bb9?q=80&w=1887&auto=format&fit=crop" alt="粉防己采收加工，人工精选，无硫自然干燥">
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section contact">
-    <div class="section-header">
-      <h2 data-zh="想买？找我们" data-en="Want to Buy? Get in Touch">Want to Buy? Get in Touch</h2>
-      <p data-zh="客服都在，有问题尽管问" data-en="Customer service is here — ask away">Customer service is here — ask away</p>
-    </div>
-    <div class="contact-content">
-      <div class="contact-card animate-on-scroll">
-        <div class="contact-icon">📱</div>
-        <h3 data-zh="加微信" data-en="WeChat">WeChat</h3>
-        <p data-zh="扫码或者搜 fangji_vip" data-en="Scan or search fangji_vip">Scan or search fangji_vip</p>
+  <!-- 品质保障 -->
+  <section class="quality">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-lang-key="quality_title">品质保障体系</h2>
+        <p data-lang-key="quality_desc">我们建立了从种植到加工的全流程品质管控体系，严格遵循《中药材生产质量管理规范》(GAP)，确保每一批粉防己原药材都符合药典标准和客户要求。</p>
       </div>
-      <div class="contact-card animate-on-scroll">
-        <div class="contact-icon">📞</div>
-        <h3 data-zh="打电话" data-en="Phone">Phone</h3>
-        <p>+86 159 0949 5122</p>
+      
+      <div class="quality-grid">
+        <div class="quality-card animate-on-scroll">
+          <div class="quality-icon">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h3 data-lang-key="quality_1_title">道地产区种植</h3>
+          <p data-lang-key="quality_1_desc">选择浙江丽水、江西赣北核心道地产区，气候土壤条件适宜，保证粉防己的道地性和有效成分粉防己碱、防己诺林碱的含量达标。</p>
+        </div>
+        <div class="quality-card animate-on-scroll">
+          <div class="quality-icon">
+            <i class="fas fa-ban"></i>
+          </div>
+          <h3 data-lang-key="quality_2_title">无硫无添加加工</h3>
+          <p data-lang-key="quality_2_desc">拒绝硫磺熏蒸、拒绝使用防腐剂等化学添加剂，采用自然晾晒+低温干燥工艺，保留粉防己的天然药性和外观性状。</p>
+        </div>
+        <div class="quality-card animate-on-scroll">
+          <div class="quality-icon">
+            <i class="fas fa-vial"></i>
+          </div>
+          <h3 data-lang-key="quality_3_title">全项检测把控</h3>
+          <p data-lang-key="quality_3_desc">每批次产品均送第三方检测机构检测，农残、重金属、黄曲霉毒素、二氧化硫等指标均符合2020版《中国药典》要求。</p>
+        </div>
+        <div class="quality-card animate-on-scroll">
+          <div class="quality-icon">
+            <i class="fas fa-box"></i>
+          </div>
+          <h3 data-lang-key="quality_4_title">标准化包装储运</h3>
+          <p data-lang-key="quality_4_desc">采用食品级包装材料，真空密封包装，防潮防虫，全程温控物流，保证运输和储存过程中的品质稳定。</p>
+        </div>
       </div>
-      <div class="contact-card animate-on-scroll">
-        <div class="contact-icon">✉️</div>
-        <h3 data-zh="发邮件" data-en="Email">Email</h3>
-        <p>service@fangji.com</p>
-      </div>
-    </div>
-    <div class="qr-section">
-      <div class="qr-code">📱</div>
-      <p><strong data-zh="扫描微信二维码" data-en="Scan WeChat QR Code">Scan WeChat QR Code</strong></p>
-      <p data-zh="添加客服微信" data-en="Add Customer Service on WeChat">Add Customer Service on WeChat</p>
-      <p style="color: var(--primary-green); font-size: 0.9rem; margin-top: var(--spacing-xs);" data-zh="获取专属优惠" data-en="Get Exclusive Discounts">Get Exclusive Discounts</p>
     </div>
   </section>
 
+  <!-- 采购优势 -->
+  <section class="advantage">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-lang-key="advantage_title">采购合作优势</h2>
+        <p data-lang-key="advantage_desc">作为粉防己道地产区的源头种植基地，我们能为您提供更具性价比的采购方案和更专业的服务支持</p>
+      </div>
+      
+      <div class="advantage-grid">
+        <div class="advantage-card animate-on-scroll">
+          <div class="advantage-icon">
+            <i class="fas fa-mountain"></i>
+          </div>
+          <h3 data-lang-key="advantage_1_title">产地直供</h3>
+          <p data-lang-key="advantage_1_desc">自有800余亩种植基地，无中间商环节，价格更具优势，可提供基地考察、实地验货服务。</p>
+        </div>
+        <div class="advantage-card animate-on-scroll">
+          <div class="advantage-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3 data-lang-key="advantage_2_title">全国配送</h3>
+          <p data-lang-key="advantage_2_desc">与多家物流企业合作，支持全国物流配送，批量采购可专车送货上门，全程温控运输。</p>
+        </div>
+        <div class="advantage-card animate-on-scroll">
+          <div class="advantage-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 data-lang-key="advantage_3_title">长期稳定供货</h3>
+          <p data-lang-key="advantage_3_desc">可签订年度采购协议，保证全年稳定供货，根据市场行情调整价格，规避价格波动风险。</p>
+        </div>
+        <div class="advantage-card animate-on-scroll">
+          <div class="advantage-icon">
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <h3 data-lang-key="advantage_4_title">定制化服务</h3>
+          <p data-lang-key="advantage_4_desc">可根据客户需求定制切片规格（薄片/厚片/段）、包装规格，提供贴牌加工、代储代运等增值服务。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 客户评价 -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-lang-key="testimonials_title">客户评价</h2>
+        <p data-lang-key="testimonials_desc">来自全国各地制药企业、饮片厂、中药材批发商的真实反馈</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-on-scroll">
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="testimonial-content" data-lang-key="testimonial_1">
+            "合作3年了，他家的粉防己品质一直很稳定，粉性足，无硫熏，粉防己碱含量检测均在1.2%以上，符合我们的投料标准，价格也比市场统货实在，是我们的核心供应商。"
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">张</div>
+            <div class="author-info">
+              <h4>张总</h4>
+              <p data-lang-key="testimonial_1_author">安徽 · 中药材批发商</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="testimonial-content" data-lang-key="testimonial_2">
+            "作为制药企业，我们对原料要求严格，第一次合作先拿了样品送检，农残、重金属、有效成分均符合药典要求，后续批量采购的货和样品一致，值得信赖。"
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">李</div>
+            <div class="author-info">
+              <h4>李经理</h4>
+              <p data-lang-key="testimonial_2_author">广东 · 制药企业采购部</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="testimonial-content" data-lang-key="testimonial_3">
+            "我们是饮片加工厂，需要定制切片规格，厂家配合度很高，交货及时，包装严实，到货没有破损。老板懂药材懂工艺，沟通起来很顺畅，会继续合作。"
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">王</div>
+            <div class="author-info">
+              <h4>王老板</h4>
+              <p data-lang-key="testimonial_3_author">山东 · 中医药饮片厂</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系采购 -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-lang-key="contact_title">采购咨询合作</h2>
+        <p data-lang-key="contact_desc">欢迎来电/微信咨询，我们将为您提供专业的报价、检测报告和定制化采购方案</p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-card animate-on-scroll">
+          <div class="contact-icon">
+            <i class="fab fa-weixin"></i>
+          </div>
+          <h3 data-lang-key="contact_wechat">微信咨询</h3>
+          <p>fanzhejun66</p>
+          <span class="en-text">WeChat ID: fanzhejun66</span>
+          <a href="#contact" class="btn btn-primary" data-lang-key="btn_add_wechat">添加微信</a>
+        </div>
+        <div class="contact-card animate-on-scroll">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3 data-lang-key="contact_phone">电话咨询</h3>
+          <p>8615909495122</p>
+          <span class="en-text">Phone: +86 15909495122</span>
+          <a href="tel:8615909495122" class="btn btn-primary" data-lang-key="btn_call_now">立即拨打</a>
+        </div>
+        <div class="contact-card animate-on-scroll">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3 data-lang-key="contact_email">邮件咨询</h3>
+          <p>faf02831@gmail.com</p>
+          <span class="en-text">Email: faf02831@gmail.com</span>
+          <a href="mailto:faf02831@gmail.com" class="btn btn-primary" data-lang-key="btn_send_email">发送邮件</a>
+        </div>
+      </div>
+      
+      <div class="qr-section animate-on-scroll">
+        <h3 style="margin-bottom: var(--space-sm); color: var(--primary-dark);" data-lang-key="qr_title">扫码添加客服微信</h3>
+        <div class="qr-code">
+          <i class="fab fa-weixin"></i>
+        </div>
+        <p style="color: var(--primary); font-size: 1rem; margin-top: var(--space-sm); font-weight: 500;" data-lang-key="qr_note">
+          备注"采购咨询"，可获取最新报价单+检测报告样本
+        </p>
+        <p style="color: var(--gray); font-size: 0.9rem; margin-top: 5px;">
+          Note: "Procurement Consultation" to get latest quotation + test report sample
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
   <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>🌿 HanFangji Herbal · 汉防己草本</h3>
-        <p data-zh="一味老药，用心做好" data-en="One Old Herb, Done Right">One Old Herb, Done Right</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-leaf"></i> <span data-lang-key="footer_brand">汉防己草本</span></h3>
+          <p data-lang-key="footer_desc">专业粉防己原药材GAP种植基地，专注道地产区粉防己种植加工15年，为制药企业、饮片厂、中药材批发商提供优质无硫粉防己原药材。</p>
+          <p class="en-text">Professional GAP planting base for Stephania tetrandra raw medicinal materials, focusing on planting and processing for 15 years in genuine producing areas, providing high-quality sulfur-free raw materials for pharmaceutical enterprises, herbal slice factories and Chinese medicinal materials wholesalers.</p>
+        </div>
+        <div class="footer-section">
+          <h3 data-lang-key="footer_nav">快速导航</h3>
+          <a href="#home" data-lang-key="nav_home">首页</a>
+          <a href="#product" data-lang-key="nav_product">粉防己原药材</a>
+          <a href="#farm" data-lang-key="nav_farm">种植基地</a>
+          <a href="#contact" data-lang-key="nav_contact">采购咨询</a>
+        </div>
+        <div class="footer-section">
+          <h3 data-lang-key="footer_product">产品信息</h3>
+          <a href="#product" data-lang-key="product_name">粉防己原药材（药典级）</a>
+          <a href="#quality" data-lang-key="quality_title">品质保障体系</a>
+          <a href="#advantage" data-lang-key="advantage_title">采购合作优势</a>
+          <a href="#contact" data-lang-key="footer_custom_service">定制加工服务</a>
+        </div>
+        <div class="footer-section">
+          <h3 data-lang-key="footer_contact">联系方式</h3>
+          <p data-lang-key="footer_wechat">微信：fanzhejun66 <span class="en-text">WeChat: fanzhejun66</span></p>
+          <p data-lang-key="footer_phone">电话：8615909495122 <span class="en-text">Phone: +86 15909495122</span></p>
+          <p data-lang-key="footer_email">邮箱：faf02831@gmail.com <span class="en-text">Email: faf02831@gmail.com</span></p>
+          <p data-lang-key="footer_address">地址：江西宜春 <span class="en-text">Address: Yichun, Jiangxi Province, China</span></p>
+        </div>
       </div>
-      <div class="footer-section">
-        <h3 data-zh="导航" data-en="Navigation">Navigation</h3>
-        <a href="index.html" data-zh="首页" data-en="Home">Home</a>
-        <a href="products.html" data-zh="产品" data-en="Products">Products</a>
-        <a href="about.html" data-zh="我们的故事" data-en="Our Story">Our Story</a>
-        <a href="contact.html" data-zh="联系我们" data-en="Contact">Contact</a>
+      <div class="footer-bottom">
+        <p data-lang-key="footer_copyright">© 2024 汉防己草本 版权所有 | 本网站产品仅作为中药材原料销售，不作药用宣传 | 符合2020版《中国药典》标准</p>
+        <p style="margin-top: 8px; font-size: 0.8rem;">© 2024 HanFangji Herbal All Rights Reserved | Products on this website are sold only as raw materials of Chinese medicinal materials, not for medicinal promotion | Compliant with the 2020 edition of Chinese Pharmacopoeia standards</p>
       </div>
-      <div class="footer-section">
-        <h3 data-zh="产品" data-en="Products">Products</h3>
-        <a href="products.html" data-zh="原药材" data-en="Raw Herb">Raw Herb</a>
-        <a href="products.html" data-zh="胶囊" data-en="Capsules">Capsules</a>
-        <a href="products.html" data-zh="茶包" data-en="Tea Bags">Tea Bags</a>
-        <a href="products.html" data-zh="泡酒料" data-en="Wine Kit">Wine Kit</a>
-      </div>
-      <div class="footer-section">
-        <h3 data-zh="联系" data-en="Contact">Contact</h3>
-        <p>WeChat: fangji_vip</p>
-        <p>Phone: +86 159 0949 5122</p>
-        <p>Email: service@fangji.com</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p data-zh="© 2024 汉防己草本。版权所有 | 本网站仅供产品展示，具体功效因人而异" data-en="© 2024 HanFangji Herbal. All Rights Reserved. | This website is for product display only. Individual results may vary.">© 2024 HanFangji Herbal. All Rights Reserved. | This website is for product display only. Individual results may vary.</p>
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <!-- 返回顶部按钮 -->
+  <button class="back-to-top" id="backToTop" aria-label="返回顶部">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-  <div class="wechat-float" id="wechatFloat">💬</div>
+  <!-- 悬浮微信按钮 -->
+  <div class="wechat-float" id="wechatFloat">
+    <i class="fab fa-weixin"></i>
+  </div>
   <div class="wechat-popup" id="wechatPopup">
-    <p data-zh="扫描二维码添加客服" data-en="Scan QR code to add customer service">Scan QR code to add customer service</p>
-    <div class="qr-code" style="width: 150px; height: 150px; font-size: 2rem;">📱</div>
-    <p style="font-size: 0.9rem; color: var(--text-light);" data-zh="微信号：fangji_vip" data-en="WeChat ID: fangji_vip">WeChat ID: fangji_vip</p>
+    <p style="color: var(--dark);" data-lang-key="wechat_popup_title">扫码添加采购客服</p>
+    <p style="color: var(--light-gray); font-size: 0.8rem; margin-bottom: 8px;">Scan to add procurement customer service</p>
+    <div class="qr-code" style="width: 150px; height: 150px; font-size: 2rem;">
+      <i class="fab fa-weixin"></i>
+    </div>
+    <p style="font-size: 0.9rem; color: var(--light-gray);" data-lang-key="wechat_id">微信号：fanzhejun66</p>
+    <p style="font-size: 0.8rem; color: var(--light-gray);">WeChat ID: fanzhejun66</p>
   </div>
 
+  <!-- 移动端咨询按钮 -->
   <div class="mobile-consult-btn">
-    <a href="contact.html" class="btn btn-primary" data-zh="立即咨询" data-en="Consult Now">Consult Now</a>
+    <a href="#contact" class="btn btn-emphasis" data-lang-key="btn_consult_now">立即采购咨询</a>
   </div>
 
-  <script src="js/main.js" defer></script>
-  <script src="js/lang-switch.js" defer></script>
+  <script>
+    // ==================== 语言切换核心功能 ====================
+    // 语言包定义
+    const translations = {
+      zh: {
+        logo: "汉防己草本",
+        nav_home: "首页",
+        nav_product: "粉防己原药材",
+        nav_farm: "种植基地",
+        nav_testimonials: "客户评价",
+        nav_contact: "采购咨询",
+        hero_title: "粉防己原药材",
+        hero_subtitle: "浙江、江西赣北产地直供 · 天然无硫",
+        hero_desc: "粉防己（Stephania tetrandra S. Moore）为防己科千金藤属植物，主产于浙江、江西赣北等道地产区。我们坚持仿野生种植模式，遵循GAP种植规范，全程无硫加工，保留药材天然药性，是制药、饮片加工的优质原料。",
+        btn_view_product: "查看产品详情",
+        btn_consult_now: "立即采购咨询",
+        stat_1: "亩GAP种植基地（浙江+赣北）",
+        stat_2: "代人传统种植技艺传承",
+        stat_3: "无硫无添加自然加工",
+        stat_4: "客户复购率（药企/饮片厂）",
+        product_title: "粉防己原药材",
+        product_desc: "粉防己为《中国药典》收载品种，性寒，味苦，归膀胱、肺经，具有利水消肿、祛风止痛的功效。我们的粉防己原药材严格按照药典标准采收加工，有效成分粉防己碱含量≥1.0%，符合2020版《中国药典》要求。",
+        product_name: "粉防己原药材（精选级）",
+        product_spec_title: "药典标准规格",
+        spec_origin: "产地",
+        spec_process: "加工方式",
+        spec_process_val: "自然晾晒，无硫熏，低温干燥",
+        spec_shape: "形态",
+        spec_shape_val: "精选切片（3-5mm），粉性足",
+        spec_moisture: "含水率",
+        spec_alkaloid: "粉防己碱含量",
+        spec_packaging: "包装方式",
+        spec_packaging_val: "食品级真空包装/食品级编织袋",
+        spec_storage: "储存条件",
+        price_unit: "/ 500g（药典级零售）",
+        product_price_note: "批量采购（≥50kg）价格更优，可提供第三方检测报告（农残、重金属、有效成分），支持定制切片规格、包装方式，欢迎来电咨询具体报价和合作方案。",
+        btn_quote: "立即询价",
+        btn_test_report: "索取检测报告",
+        farm_title: "道地产区种植基地",
+        farm_desc: "粉防己喜温暖湿润气候，适宜生长在海拔200-800米的丘陵山地，浙江丽水、江西赣北地区土壤疏松肥沃、气候温和湿润，是粉防己的传统道地产区，所产粉防己粉性足、有效成分含量高。",
+        quality_title: "品质保障体系",
+        quality_desc: "我们建立了从种植到加工的全流程品质管控体系，严格遵循《中药材生产质量管理规范》(GAP)，确保每一批粉防己原药材都符合药典标准和客户要求。",
+        quality_1_title: "道地产区种植",
+        quality_1_desc: "选择浙江丽水、江西赣北核心道地产区，气候土壤条件适宜，保证粉防己的道地性和有效成分粉防己碱、防己诺林碱的含量达标。",
+        quality_2_title: "无硫无添加加工",
+        quality_2_desc: "拒绝硫磺熏蒸、拒绝使用防腐剂等化学添加剂，采用自然晾晒+低温干燥工艺，保留粉防己的天然药性和外观性状。",
+        quality_3_title: "全项检测把控",
+        quality_3_desc: "每批次产品均送第三方检测机构检测，农残、重金属、黄曲霉毒素、二氧化硫等指标均符合2020版《中国药典》要求。",
+        quality_4_title: "标准化包装储运",
+        quality_4_desc: "采用食品级包装材料，真空密封包装，防潮防虫，全程温控物流，保证运输和储存过程中的品质稳定。",
+        advantage_title: "采购合作优势",
+        advantage_desc: "作为粉防己道地产区的源头种植基地，我们能为您提供更具性价比的采购方案和更专业的服务支持",
+        advantage_1_title: "产地直供",
+        advantage_1_desc: "自有800余亩种植基地，无中间商环节，价格更具优势，可提供基地考察、实地验货服务。",
+        advantage_2_title: "全国配送",
+        advantage_2_desc: "与多家物流企业合作，支持全国物流配送，批量采购可专车送货上门，全程温控运输。",
+        advantage_3_title: "长期稳定供货",
+        advantage_3_desc: "可签订年度采购协议，保证全年稳定供货，根据市场行情调整价格，规避价格波动风险。",
+        advantage_4_title: "定制化服务",
+        advantage_4_desc: "可根据客户需求定制切片规格（薄片/厚片/段）、包装规格，提供贴牌加工、代储代运等增值服务。",
+        testimonials_title: "客户评价",
+        testimonials_desc: "来自全国各地制药企业、饮片厂、中药材批发商的真实反馈",
+        testimonial_1: "合作3年了，他家的粉防己品质一直很稳定，粉性足，无硫熏，粉防己碱含量检测均在1.2%以上，符合我们的投料标准，价格也比市场统货实在，是我们的核心供应商。",
+        testimonial_1_author: "安徽 · 中药材批发商",
+        testimonial_2: "作为制药企业，我们对原料要求严格，第一次合作先拿了样品送检，农残、重金属、有效成分均符合药典要求，后续批量采购的货和样品一致，值得信赖。",
+        testimonial_2_author: "广东 · 制药企业采购部",
+        testimonial_3: "我们是饮片加工厂，需要定制切片规格，厂家配合度很高，交货及时，包装严实，到货没有破损。老板懂药材懂工艺，沟通起来很顺畅，会继续合作。",
+        testimonial_3_author: "山东 · 中医药饮片厂",
+        contact_title: "采购咨询合作",
+        contact_desc: "欢迎来电/微信咨询，我们将为您提供专业的报价、检测报告和定制化采购方案",
+        contact_wechat: "微信咨询",
+        contact_phone: "电话咨询",
+        contact_email: "邮件咨询",
+        btn_add_wechat: "添加微信",
+        btn_call_now: "立即拨打",
+        btn_send_email: "发送邮件",
+        qr_title: "扫码添加客服微信",
+        qr_note: '备注"采购咨询"，可获取最新报价单+检测报告样本',
+        footer_brand: "汉防己草本",
+        footer_desc: "专业粉防己原药材GAP种植基地，专注道地产区粉防己种植加工15年，为制药企业、饮片厂、中药材批发商提供优质无硫粉防己原药材。",
+        footer_nav: "快速导航",
+        footer_product: "产品信息",
+        footer_custom_service: "定制加工服务",
+        footer_contact: "联系方式",
+        footer_wechat: "微信：fanzhejun66",
+        footer_phone: "电话：8615909495122",
+        footer_email: "邮箱：faf02831@gmail.com",
+        footer_address: "地址：江西宜春",
+        footer_copyright: "© 2024 汉防己草本 版权所有 | 本网站产品仅作为中药材原料销售，不作药用宣传 | 符合2020版《中国药典》标准",
+        wechat_popup_title: "扫码添加采购客服",
+        wechat_id: "微信号：fanzhejun66"
+      },
+      en: {
+        logo: "HanFangji Herbal",
+        nav_home: "Home",
+        nav_product: "Stephania Tetrandra",
+        nav_farm: "Planting Base",
+        nav_testimonials: "Testimonials",
+        nav_contact: "Procurement",
+        hero_title: "Stephania Tetrandra Raw Herbs",
+        hero_subtitle: "Direct Supply from Zhejiang & Northern Jiangxi · Sulfur-Free",
+        hero_desc: "Stephania tetrandra S. Moore belongs to the Menispermaceae family, mainly produced in genuine producing areas such as Zhejiang and northern Jiangxi. We adhere to wild-simulated planting mode, follow GAP planting standards, and process without sulfur throughout the whole process to retain the natural medicinal properties of the herbs, making it a high-quality raw material for pharmaceutical and herbal slice processing.",
+        btn_view_product: "View Product Details",
+        btn_consult_now: "Consult Now",
+        stat_1: "Mu GAP Planting Base (Zhejiang + Northern Jiangxi)",
+        stat_2: "Generations of Traditional Planting Skills",
+        stat_3: "100% Sulfur-Free & Additive-Free Processing",
+        stat_4: "Customer Repurchase Rate (Pharmaceutical/Herbal Factories)",
+        product_title: "Stephania Tetrandra Raw Herbs",
+        product_desc: "Stephania tetrandra is a variety included in the Chinese Pharmacopoeia. It is cold in nature, bitter in taste, attributive to the bladder and lung meridians, with effects of inducing diuresis to reduce edema, dispelling wind and relieving pain. Our Stephania tetrandra raw herbs are harvested and processed in strict accordance with pharmacopoeia standards, with the content of tetrandrine (effective component) ≥1.0%, meeting the requirements of the 2020 edition of Chinese Pharmacopoeia.",
+        product_name: "Stephania Tetrandra Raw Herbs (Selected Grade)",
+        product_spec_title: "Pharmacopoeia Standard Specifications",
+        spec_origin: "Origin",
+        spec_process: "Processing Method",
+        spec_process_val: "Natural air drying, sulfur-free fumigation, low temperature drying",
+        spec_shape: "Form",
+        spec_shape_val: "Selected slices (3-5mm), high powder content",
+        spec_moisture: "Moisture Content",
+        spec_alkaloid: "Tetrandrine Content",
+        spec_packaging: "Packaging Method",
+        spec_packaging_val: "Food-grade vacuum packaging / Food-grade woven bags",
+        spec_storage: "Storage Conditions",
+        price_unit: "/ 500g (Pharmacopoeia Grade Retail)",
+        product_price_note: "Bulk purchase (≥50kg) enjoys better price. Third-party test reports (pesticide residues, heavy metals, active ingredients) can be provided. Custom slice specifications and packaging methods are supported. Welcome to call for specific quotations and cooperation plans.",
+        btn_quote: "Get Quote Now",
+        btn_test_report: "Request Test Report",
+        farm_title: "Genuine Producing Area Planting Base",
+        farm_desc: "Stephania tetrandra likes warm and humid climate, suitable for growing in hilly mountains at an altitude of 200-800 meters. Lishui in Zhejiang and northern Jiangxi have loose and fertile soil, mild and humid climate, which are traditional genuine producing areas of Stephania tetrandra. The produced Stephania tetrandra has high powder content and high active ingredient content.",
+        quality_title: "Quality Assurance System",
+        quality_desc: "We have established a full-process quality control system from planting to processing, strictly following the Good Agricultural Practice (GAP) for Chinese Crude Drugs, to ensure that each batch of Stephania tetrandra raw herbs meets pharmacopoeia standards and customer requirements.",
+        quality_1_title: "Genuine Producing Area Planting",
+        quality_1_desc: "Select core genuine producing areas of Lishui in Zhejiang and northern Jiangxi with suitable climate and soil conditions to ensure the genuineness of Stephania tetrandra and the compliance of tetrandrine and fangchinoline content.",
+        quality_2_title: "Sulfur-Free & Additive-Free Processing",
+        quality_2_desc: "Refuse sulfur fumigation and chemical additives such as preservatives. Adopt natural air drying + low temperature drying technology to retain the natural medicinal properties and appearance of Stephania tetrandra.",
+        quality_3_title: "Comprehensive Testing Control",
+        quality_3_desc: "Each batch of products is sent to third-party testing institutions for testing. Indicators such as pesticide residues, heavy metals, aflatoxins and sulfur dioxide all meet the requirements of the 2020 edition of Chinese Pharmacopoeia.",
+        quality_4_title: "Standardized Packaging & Logistics",
+        quality_4_desc: "Adopt food-grade packaging materials, vacuum sealed packaging, moisture-proof and insect-proof, temperature-controlled logistics throughout the whole process to ensure stable quality during transportation and storage.",
+        advantage_title: "Procurement Cooperation Advantages",
+        advantage_desc: "As the source planting base of Stephania tetrandra in genuine producing areas, we can provide you with more cost-effective procurement solutions and more professional service support",
+        advantage_1_title: "Direct from Origin",
+        advantage_1_desc: "Own more than 800 mu of planting bases, no intermediate links, more competitive prices, and can provide base inspection and on-site inspection services.",
+        advantage_2_title: "Nationwide Distribution",
+        advantage_2_desc: "Cooperate with multiple logistics enterprises to support nationwide logistics distribution. Bulk purchases can be delivered to the door by special vehicles with temperature-controlled transportation throughout the whole process.",
+        advantage_3_title: "Long-term Stable Supply",
+        advantage_3_desc: "Annual procurement agreements can be signed to ensure stable supply throughout the year, adjust prices according to market conditions, and avoid price fluctuation risks.",
+        advantage_4_title: "Customized Services",
+        advantage_4_desc: "Custom slice specifications (thin/thick slices/sections) and packaging specifications can be provided according to customer needs, as well as value-added services such as OEM processing and consignment storage and transportation.",
+        testimonials_title: "Customer Testimonials",
+        testimonials_desc: "Genuine feedback from pharmaceutical enterprises, herbal slice factories and Chinese medicinal materials wholesalers nationwide",
+        testimonial_1: "We have cooperated for 3 years. The quality of their Stephania tetrandra has always been stable, with high powder content and no sulfur fumigation. The detected tetrandrine content is above 1.2%, which meets our feeding standards. The price is more reasonable than the market bulk goods, making them our core supplier.",
+        testimonial_1_author: "Anhui · Chinese Medicinal Materials Wholesaler",
+        testimonial_2: "As a pharmaceutical enterprise, we have strict requirements for raw materials. For the first cooperation, we took samples for testing first. Pesticide residues, heavy metals and active ingredients all met pharmacopoeia requirements. The bulk purchased goods were consistent with the samples, which is trustworthy.",
+        testimonial_2_author: "Guangdong · Pharmaceutical Enterprise Purchasing Department",
+        testimonial_3: "We are a herbal slice processing factory and need customized slice specifications. The manufacturer has a high degree of cooperation, timely delivery, tight packaging, and no damage upon arrival. The boss understands medicinal materials and technology, and communication is smooth. We will continue to cooperate.",
+        testimonial_3_author: "Shandong · Chinese Herbal Medicine Slice Factory",
+        contact_title: "Procurement Consultation & Cooperation",
+        contact_desc: "Welcome to consult by phone/WeChat. We will provide you with professional quotations, test reports and customized procurement solutions",
+        contact_wechat: "WeChat Consultation",
+        contact_phone: "Phone Consultation",
+        contact_email: "Email Consultation",
+        btn_add_wechat: "Add WeChat",
+        btn_call_now: "Call Now",
+        btn_send_email: "Send Email",
+        qr_title: "Scan to Add Customer Service WeChat",
+        qr_note: 'Note "Procurement Consultation" to get the latest quotation + test report sample',
+        footer_brand: "HanFangji Herbal",
+        footer_desc: "Professional GAP planting base for Stephania tetrandra raw medicinal materials, focusing on planting and processing of Stephania tetrandra in genuine producing areas for 15 years, providing high-quality sulfur-free Stephania tetrandra raw medicinal materials for pharmaceutical enterprises, herbal slice factories and Chinese medicinal materials wholesalers.",
+        footer_nav: "Quick Navigation",
+        footer_product: "Product Information",
+        footer_custom_service: "Custom Processing Services",
+        footer_contact: "Contact Information",
+        footer_wechat: "WeChat: fanzhejun66",
+        footer_phone: "Phone: 8615909495122",
+        footer_email: "Email: faf02831@gmail.com",
+        footer_address: "Address: Yichun, Jiangxi Province",
+        footer_copyright: "© 2024 HanFangji Herbal All Rights Reserved | Products on this website are sold only as raw materials of Chinese medicinal materials, not for medicinal promotion | Compliant with the 2020 edition of Chinese Pharmacopoeia standards",
+        wechat_popup_title: "Scan to Add Procurement Service",
+        wechat_id: "WeChat ID: fanzhejun66"
+      }
+    };
+
+    // 设置当前语言
+    let currentLang = localStorage.getItem('selectedLang') || 'zh';
+    
+    // 更新页面文本
+    function updateLanguage(lang) {
+      // 更新HTML lang属性
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      
+      // 更新页面标题
+      if (lang === 'zh') {
+        document.title = '汉防己草本 | 粉防己原药材种植销售，浙江、江西赣北产地直供';
+      } else {
+        document.title = 'HanFangji Herbal | Stephania Tetrandra Raw Herbs, Direct Supply from Zhejiang & Northern Jiangxi';
+      }
+      
+      // 更新所有带data-lang-key属性的元素
+      document.querySelectorAll('[data-lang-key]').forEach(element => {
+        const key = element.getAttribute('data-lang-key');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      
+      // 更新语言按钮状态
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
+        }
+      });
+      
+      // 保存到本地存储
+      localStorage.setItem('selectedLang', lang);
+      currentLang = lang;
+    }
+
+    // 初始化语言
+    updateLanguage(currentLang);
+
+    // 语言切换按钮事件
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        updateLanguage(lang);
+      });
+    });
+
+    // ==================== 原有功能代码 ====================
+    // 1. 移动端菜单切换
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      // 切换菜单图标
+      const icon = mobileMenuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+    
+    // 点击导航链接关闭菜单
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+        mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+      });
+    });
+    
+    // 2. 返回顶部按钮
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      // 显示/隐藏返回顶部按钮
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+      
+      // 滚动动画
+      const animateElements = document.querySelectorAll('.animate-on-scroll');
+      animateElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight - 100) {
+          element.classList.add('show');
+        }
+      });
+      
+      // 导航栏高亮
+      const sections = document.querySelectorAll('section[id]');
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+      
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === currentSection) {
+          link.classList.add('active');
+        }
+      });
+    });
+    
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // 3. 初始化滚动动画
+    window.addEventListener('load', () => {
+      const animateElements = document.querySelectorAll('.animate-on-scroll');
+      animateElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementTop < windowHeight - 100) {
+          element.classList.add('show');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
