@@ -306,6 +306,24 @@ p { font-size: clamp(0.9375rem, 1.5vw, 1.125rem); }
   }
 }
 
+/* 性能优化 - will-change for animations */
+.animate-on-scroll,
+.fade-in {
+  will-change: transform, opacity;
+}
+
+.product-card,
+.benefit-card,
+.testimonial-card,
+.contact-card {
+  will-change: transform;
+}
+
+.back-to-top,
+.wechat-float {
+  will-change: transform;
+}
+
 /* 触摸优化 - 禁用 hover 效果 */
 @media (hover: none) and (pointer: coarse) {
   .product-card:hover,

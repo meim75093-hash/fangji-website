@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meim75093-hash.github.io/fangji-website/sitemap.xml
