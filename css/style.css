@@ -497,7 +497,7 @@ img {
 }
 
 .product-info p {
-  color: var(--text-light);
+  color: var(--text-medium);
   margin-bottom: var(--spacing-sm);
   font-size: var(--font-sm);
   line-height: 1.7;
