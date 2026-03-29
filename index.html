@@ -1271,6 +1271,12 @@
                 <a href="mailto:contact@example.com" class="btn btn-white">立即联系</a>
                 <a href="#features" class="btn btn-outline-white">了解更多</a>
             </div>
+            
+            <!-- PayPal 支付按钮 -->
+            <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(10px);">
+                <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; margin-bottom: 1rem; font-weight: 600;">💳 在线支付</p>
+                <div id="paypal-button-container" style="display: flex; justify-content: center;"></div>
+            </div>
         </div>
     </section>
 
@@ -1314,6 +1320,9 @@
         </div>
     </footer>
 
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAo-QuX9VoZG8MdBfUkEc67DPJJvL6pmKocQvDu8DzyNE9Vcr9KqJU6Icg-TeiTik41nUvQJMp9EcSe6E&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+    
     <script>
         // Mobile menu toggle
         const menuBtn = document.getElementById('menuBtn');
@@ -1366,6 +1375,31 @@
                 }
             });
         });
+
+        // PayPal 按钮渲染
+        if (typeof paypal !== 'undefined') {
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: '50.00' // 默认金额，可修改
+                            },
+                            description: '粉防己产品购买'
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        alert('支付成功！感谢您购买粉防己产品，订单号：' + details.id);
+                    });
+                },
+                onError: function(err) {
+                    console.error('支付错误:', err);
+                    alert('支付过程中出现错误，请稍后重试或联系我们。');
+                }
+            }).render('#paypal-button-container');
+        }
     </script>
 </body>
 </html>
